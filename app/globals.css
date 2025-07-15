@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-dark: #1a1a1a;
+  --primary-gray: #6b7280;
+  --light-gray: #f8fafc;
+  --accent-sage: #10b981;
+  --soft-white: #ffffff;
+  --border-light: #e5e7eb;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-gray-900 font-light;
+  }
+  .font-serif {
+    font-family: var(--font-playfair), serif;
+  }
+}
+
+@layer utilities {
+  .text-primary-dark {
+    color: var(--primary-dark);
+  }
+  .text-primary-gray {
+    color: var(--primary-gray);
+  }
+  .text-accent-sage {
+    color: var(--accent-sage);
+  }
+  .bg-primary-dark {
+    background-color: var(--primary-dark);
+  }
+  .bg-light-gray {
+    background-color: var(--light-gray);
+  }
+  .bg-accent-sage {
+    background-color: var(--accent-sage);
+  }
+  .border-light {
+    border-color: var(--border-light);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Minimal animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Clean hover effects */
+.hover-minimal {
+  transition: all 0.2s ease;
+}
+
+.hover-minimal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
