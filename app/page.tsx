@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Users, Car, Bed, Camera, Music, Flower, ChefHat, Calendar, Phone, ArrowRight, Building } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { Analytics } from "@vercel/analytics/next"
 
 export default function HomePage() {
   const services = [
@@ -32,6 +33,7 @@ export default function HomePage() {
   ]
 
   return (
+    < >
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
@@ -217,5 +219,7 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+  <Analytics />
+  </>
   )
 }
